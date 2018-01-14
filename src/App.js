@@ -9,6 +9,8 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import firebase from 'firebase';
 
+import Router from './Router';
+
 import LoginForm from './componets/LoginForm';
 
 class App extends Component {
@@ -31,9 +33,9 @@ class App extends Component {
 
         return(
             <Provider store={ store }>
-              <SafeAreaView style={ container }>
-                <LoginForm/>
-              </SafeAreaView>
+              <View style={ styles.container }>
+                <Router />
+              </View>
             </Provider>
         );
     }
